@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load django_markdown %}
+
+{% block content %}
+    <h1>Блог</h1>
+    <br>
+    {% for post in posts %}
+        <div class="card">
+            <div class="card-block">
+                {% if post.topic %}
+                    {{ post.topic|safe }}<br/><br/>
+                {% elif post.main_img %}
+                    <img src="{{ post.main_img.url }}" class="m-w-100"/><br/><br/>
+                {% endif %}
+                <h2 class="m-t-5">{{ post.title }}</h2>
+                <p class="text-muted">
+                    <small>{{ post.created }}</small>
+                </p>
+                <hr/>
+                <div class="post-body">{{ post.short_content|markdown }}</div>
+                <a href="{% url 'post' post.pk %}" class="btn btn-primary btm-sm">Читать далее ...</a>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
