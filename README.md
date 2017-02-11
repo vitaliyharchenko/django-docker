@@ -9,3 +9,8 @@ Install docker on server
 
 `docker-compose run web /usr/bin/python3.5 /data/web/harchenkopro/manage.py migrate`
 `/bin/sh /data/web/prod_run.sh`
+
+`/usr/bin/python3.5 /data/web/harchenkopro/manage.py dbbackup`
+
+`docker-compose run web /usr/bin/python3.5 /data/web/harchenkopro/manage.py dumpdata --exclude=contenttypes --exclude=auth > db.json
+`

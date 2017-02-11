@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'markdownx',
     'django_markdown',
+    'dbbackup',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +167,12 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Backups to Dropbox
+# http://django-dbbackup.readthedocs.io/en/stable/index.html
+
+DBBACKUP_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DBBACKUP_STORAGE_OPTIONS = {
+    'oauth2_access_token': 'MFY4z0tR84cAAAAAAAATpY7g2HbPhjUcnHqCq4nb4P_t_HYfKfmudWkb-MIt196A',
+}

@@ -1,8 +1,11 @@
 Django
-redis==2.10.3
-django-redis==4.3.0
-gunicorn==19.3.0
-psycopg2==2.6
+redis
+django-redis
+gunicorn
+psycopg2
+django-dbbackup
+dropbox
+django-storages
 
 django-markdown-app
 django-markdownx
