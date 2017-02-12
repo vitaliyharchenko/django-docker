@@ -5995,8 +5995,7 @@ img {
 -------------------------------------------------- */
 body {
   min-height: 75rem;
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem; }
+  padding-top: 5.5rem; }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -6004,9 +6003,9 @@ html {
   position: relative;
   min-height: 100%; }
 
-body {
+content {
   /* Margin bottom by footer height */
-  margin-bottom: 60px; }
+  padding-bottom: 120px; }
 
 .footer {
   position: absolute;
