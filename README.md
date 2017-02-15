@@ -5,12 +5,12 @@ ssh root@188.127.249.105
 KdiERVpjLuGR
 ```
 
-Install docker on server
+1. Install docker on server
 
-`docker-compose run web /usr/bin/python3.5 /data/web/harchenkopro/manage.py migrate`
-`/bin/sh /data/web/prod_run.sh`
+2. Git pul repo
 
-`/usr/bin/python3.5 /data/web/harchenkopro/manage.py dbbackup`
+3. Docker-compose build
 
-`docker-compose run web /usr/bin/python3.5 /data/web/harchenkopro/manage.py dumpdata --exclude=contenttypes --exclude=auth > db.json
-`
+4. `docker-compose run web /bin/sh`
+
+5. `sh prod_run.sh`
